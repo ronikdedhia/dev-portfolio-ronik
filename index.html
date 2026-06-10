@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ronik Dedhia — Full-Stack & AI Engineer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Ronik Dedhia — Full-Stack Software Engineer and AI Developer building intelligent web systems in Mumbai, India. Next.js · NestJS · LLMs · RAG · Computer Vision." />
+  <meta name="keywords" content="Ronik Dedhia, Full-Stack Engineer, AI Developer, Next.js, NestJS, React, LLMs, RAG, Mumbai" />
+  <meta name="author" content="Ronik Dedhia" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ronik Dedhia — Full-Stack & AI Engineer" />
+  <meta property="og:description" content="Full-Stack SWE & AI Developer. Next.js · NestJS · LLMs · RAG · Computer Vision. ₹60Cr+ business impact @ FlexiLoans, Mumbai." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ronikdedhia.dev" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Ronik Dedhia — Full-Stack & AI Engineer" />
+  <meta name="twitter:description" content="Full-Stack SWE & AI Developer based in Mumbai. IEEE published. Star Performer @ FlexiLoans." />
+
+  <!-- Favicon: RD gradient monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23818cf8'/><stop offset='100%25' stop-color='%2322d3ee'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><text x='16' y='22' font-family='Arial,sans-serif' font-size='12' font-weight='900' fill='white' text-anchor='middle'>RD</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Reading progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">RD</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#publications">Research</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">Ronik<br />Dedhia</h1>
+      <div class="hero-role">
+        <span class="role-prefix">I build </span><span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-bio">Full-Stack Software Engineer crafting intelligent web systems at the intersection of modern frontend, scalable backend, and generative AI. Currently driving fintech engineering at <strong>FlexiLoans</strong>, Mumbai.</p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="Ronik_Dedhia_Resume.pdf" download class="btn btn-secondary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+      </div>
+
+      <div class="hero-links">
+        <a href="https://github.com/ronikdedhia" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/ronik-dedhia" target="_blank" rel="noopener" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:ronikdedhia@gmail.com" class="social-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">₹60Cr+</span>
+        <span class="stat-label">Business Impact</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">53+</span>
+        <span class="stat-label">GitHub Repos</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">2</span>
+        <span class="stat-label">Publications</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">9.26</span>
+        <span class="stat-label">CGPA</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERTISE STRIP ═══ -->
+  <section class="expertise-strip">
+    <div class="container">
+      <div class="expertise-grid">
+
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+            </svg>
+          </div>
+          <h3>Full-Stack Web</h3>
+          <p>End-to-end products — pixel-perfect frontends to distributed, scalable backends with battle-tested integrations.</p>
+          <div class="expertise-tech">React · Next.js · NestJS · Angular · TypeScript · Node.js</div>
+        </div>
+
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
+            </svg>
+          </div>
+          <h3>Generative AI Systems</h3>
+          <p>Production LLM pipelines — RAG architectures, vector search, multi-stage NLP, and intelligent agent orchestration.</p>
+          <div class="expertise-tech">Groq · LangChain · RAG · Qdrant · NLP · FinBERT · LLMs</div>
+        </div>
+
+        <div class="expertise-card reveal">
+          <div class="expertise-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </div>
+          <h3>Computer Vision & ML</h3>
+          <p>Real-time inference systems — object detection, pose estimation, and custom model training at production accuracy.</p>
+          <div class="expertise-tech">TensorFlow · Keras · OpenCV · YOLOv5 · MediaPipe · BlazePose</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About</span>
+        <h2>Web Engineer meets AI Builder</h2>
+      </div>
+      <div class="about-grid">
+
+        <!-- Photo col -->
+        <div class="about-photo-col reveal">
+          <div class="profile-photo-wrap">
+            <img src="assets/photo.jpeg" alt="Ronik Dedhia" class="profile-img" />
+            <div class="photo-glow"></div>
+          </div>
+          <div class="profile-quick-facts">
+            <div class="pqf-row">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Mumbai, India
+            </div>
+            <div class="pqf-row">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              SDE I · FlexiLoans
+            </div>
+            <div class="pqf-row">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+              +91 81049 40424
+            </div>
+            <div class="pqf-row">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              ronikdedhia@gmail.com
+            </div>
+          </div>
+        </div>
+
+        <!-- Bio col -->
+        <div class="about-text reveal">
+          <p>I'm a Mumbai-based Full-Stack Software Engineer with a sharp focus on building production-grade web applications and AI-powered systems. Currently at <strong>FlexiLoans</strong>, I've contributed to <strong>₹60Cr+ incremental disbursements</strong> and earned a Star Performer award for designing enterprise-grade RBAC systems.</p>
+          <p>My work spans the full spectrum — from pixel-perfect React and Next.js frontends to robust NestJS and FastAPI backends, all the way to LLM pipelines using RAG, vector search, and multi-stage GROQ/Llama architectures. I've shipped products across fintech, restaurant analytics, news AI, and computer vision.</p>
+          <p>I'm deeply drawn to problems where <strong>beautiful interfaces</strong> meet <strong>intelligent systems</strong>. Whether that's a FinBERT-powered earnings analysis tool or a real-time yoga pose estimator published in IEEE — I build things that work.</p>
+        </div>
+
+        <!-- Highlights col -->
+        <div class="about-highlights reveal">
+          <div class="highlight-card">
+            <span class="highlight-icon">🏆</span>
+            <div>
+              <strong>Star Performer Award</strong>
+              <span>FlexiLoans — RBAC system design across internal dashboard and LOS</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">📄</span>
+            <div>
+              <strong>IEEE Published Researcher</strong>
+              <span>Computer vision research on yoga pose estimation & ASL recognition</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🎓</span>
+            <div>
+              <strong>9.26 CGPA — Distinction</strong>
+              <span>B.Tech IT, DJSCE University of Mumbai</span>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-icon">🤖</span>
+            <div>
+              <strong>GenAI Stack Builder</strong>
+              <span>RAG pipelines, LLM orchestration, vector search, NLP systems</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE ═══ -->
+  <section id="experience" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Experience</span>
+        <h2>Where I've Worked</h2>
+      </div>
+
+      <div class="experience-card reveal">
+        <div class="exp-header">
+          <div class="exp-company">
+            <div class="company-logo">FL</div>
+            <div>
+              <h3>FlexiLoans Epimoney Pvt Ltd</h3>
+              <span class="exp-role">Software Development Engineer I</span>
+            </div>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date">July 2024 – Present</span>
+            <span class="exp-location">📍 Mumbai, India</span>
+          </div>
+        </div>
+
+        <div class="exp-metrics">
+          <div class="metric">
+            <span class="metric-val">₹60Cr+</span>
+            <span class="metric-desc">Incremental Disbursements</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">40K</span>
+            <span class="metric-desc">Deviations / Month</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">65%</span>
+            <span class="metric-desc">Fraud Reduction</span>
+          </div>
+          <div class="metric">
+            <span class="metric-val">1L+</span>
+            <span class="metric-desc">Monthly Notifications</span>
+          </div>
+        </div>
+
+        <ul class="exp-bullets">
+          <li>Drove <strong>₹60Cr+ incremental disbursements</strong> — engineered EMI disbursement-cycle shift driving ₹40Cr uplift and onboarded Synoric, ABFL, and Slice as co-lenders (₹20Cr business); built Next.js frontend and NestJS backend APIs owning end-to-end Loan Origination System delivery</li>
+          <li>Earned <strong>Star Performer award</strong> for designing Role-Based Access Control across internal dashboard and LOS; built deviation management dashboard supporting 9 approval levels processing 40K deviations/month; revamped FL-KYC page with document OCR API and OTP-based MFA</li>
+          <li>Integrated Fyno (DLT-approved SMS) and SendGrid achieving <strong>98% delivery rates</strong> across 1L+ monthly notifications; owned WhatsApp, Gmail, and dashboard service integrations</li>
+          <li>Deployed MNRL and FRI fraud-check APIs, <strong>reducing fraudulent loan approvals by 65%</strong>; consolidated redundant microservices cutting AWS and MongoDB costs by 20%</li>
+          <li>Drove <strong>Disaster Recovery</strong> planning reducing recovery time by 35%; owned and extended Jarvis — internal platform managing 1000+ employees, 100+ roles, 500+ partners, auto-dialer, A/B testing</li>
+        </ul>
+
+        <div class="exp-tags">
+          <span>Next.js</span><span>NestJS</span><span>React</span><span>Angular</span>
+          <span>TypeScript</span><span>Node.js</span><span>MongoDB</span><span>Redis</span>
+          <span>AWS</span><span>Docker</span><span>Datadog</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Education</span>
+        <h2>Academic Background</h2>
+      </div>
+      <div class="education-grid">
+
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <div class="edu-logo">DJ</div>
+            <div class="edu-info">
+              <h3>Dwarkadas J. Sanghvi College of Engineering</h3>
+              <span class="edu-university">University of Mumbai</span>
+            </div>
+            <span class="edu-year">2024</span>
+          </div>
+          <div class="edu-degree">B.Tech in Information Technology (Hons.)</div>
+          <div class="edu-stats">
+            <div class="edu-stat">
+              <span class="edu-stat-val">9.26 / 10</span>
+              <span class="edu-stat-label">CGPA</span>
+            </div>
+            <div class="edu-stat-div"></div>
+            <div class="edu-stat">
+              <span class="edu-stat-val">Distinction</span>
+              <span class="edu-stat-label">Grade</span>
+            </div>
+            <div class="edu-stat-div"></div>
+            <div class="edu-stat">
+              <span class="edu-stat-val">June 2024</span>
+              <span class="edu-stat-label">Graduated</span>
+            </div>
+          </div>
+          <div class="edu-note">IEEE published research · 2 peer-reviewed papers</div>
+        </div>
+
+        <div class="edu-card reveal">
+          <div class="edu-top">
+            <div class="edu-logo">SB</div>
+            <div class="edu-info">
+              <h3>Shri Bhagubhai Mafatlal Polytechnic</h3>
+              <span class="edu-university">State Board of Technical Education</span>
+            </div>
+            <span class="edu-year">2021</span>
+          </div>
+          <div class="edu-degree">Diploma in Information Technology</div>
+          <div class="edu-stats">
+            <div class="edu-stat">
+              <span class="edu-stat-val">9.68 / 10</span>
+              <span class="edu-stat-label">CGPA</span>
+            </div>
+            <div class="edu-stat-div"></div>
+            <div class="edu-stat">
+              <span class="edu-stat-val">Distinction</span>
+              <span class="edu-stat-label">Grade</span>
+            </div>
+            <div class="edu-stat-div"></div>
+            <div class="edu-stat">
+              <span class="edu-stat-val">Aug 2021</span>
+              <span class="edu-stat-label">Graduated</span>
+            </div>
+          </div>
+          <div class="edu-note">Foundation in systems, networking & software engineering</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Projects</span>
+        <h2>What I've Built</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All <span class="filter-count">5</span></button>
+        <button class="filter-btn" data-filter="web">Web <span class="filter-count">3</span></button>
+        <button class="filter-btn" data-filter="ai">AI <span class="filter-count">5</span></button>
+        <button class="filter-btn" data-filter="research">Research <span class="filter-count">2</span></button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- EarningsLens -->
+        <div class="project-card featured reveal" data-cat="ai web">
+          <div class="project-header">
+            <div class="proj-monogram">EL</div>
+            <div class="proj-actions">
+              <a href="https://earnings-lens.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/ronikdedhia/EarningsLens" target="_blank" rel="noopener" class="project-github">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>EarningsLens</h3>
+          <p>AI-powered earnings call analysis platform for Indian NSE/BSE equities. RAG-powered natural language queries with citation tracking, 9-category red flag scanning, management quality scoring, and quarter-over-quarter topic shift analysis.</p>
+          <div class="proj-preview">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">earnings-lens.vercel.app</div>
+            </div>
+            <div class="browser-body">
+              <!-- Drop screenshot at assets/screenshots/earningslens.jpg then replace the placeholder div below with:
+                   <img src="assets/screenshots/earningslens.jpg" alt="EarningsLens" loading="lazy" /> -->
+              <div class="browser-placeholder">
+                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
+                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
+                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-features">
+            <span>RAG + Citations</span>
+            <span>Red Flag Scanner</span>
+            <span>QoQ Comparison</span>
+            <span>Guidance Tracker</span>
+          </div>
+          <div class="project-tags">
+            <span>Next.js 14</span><span>TypeScript</span><span>Qdrant</span><span>FinBERT</span><span>Groq</span><span>Voyage AI</span><span>Turso</span><span>Clerk</span>
+          </div>
+        </div>
+
+        <!-- RestoPulse -->
+        <div class="project-card featured reveal" data-cat="ai web">
+          <div class="project-header">
+            <div class="proj-monogram">RP</div>
+            <div class="proj-actions">
+              <a href="https://resto-pulse-frontend.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/ronikdedhia/RestoPulse" target="_blank" rel="noopener" class="project-github">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>RestoPulse</h3>
+          <p>AI-powered restaurant analytics platform scraping Google Maps & Zomato reviews. Multi-signal GROQ/Llama pipeline with fake review detection, NER, 0–100 health scoring, and real-time Telegram alerts for critical incidents.</p>
+          <div class="proj-preview">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">resto-pulse-frontend.vercel.app</div>
+            </div>
+            <div class="browser-body">
+              <!-- Drop screenshot at assets/screenshots/restopulse.jpg then replace the placeholder div below with:
+                   <img src="assets/screenshots/restopulse.jpg" alt="RestoPulse" loading="lazy" /> -->
+              <div class="browser-placeholder">
+                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
+                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
+                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-features">
+            <span>Fake Review Detection</span>
+            <span>Trend Diffing</span>
+            <span>NER Pipeline</span>
+            <span>Real-time Alerts</span>
+          </div>
+          <div class="project-tags">
+            <span>Next.js 14</span><span>Express</span><span>TypeScript</span><span>Turso</span><span>BullMQ</span><span>Redis</span><span>Groq</span><span>Apify</span>
+          </div>
+        </div>
+
+        <!-- Daily Bytes -->
+        <div class="project-card reveal" data-cat="ai web">
+          <div class="project-header">
+            <div class="proj-monogram">DB</div>
+            <div class="proj-actions">
+              <a href="https://daily-bytes-ten.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Live Demo
+              </a>
+              <a href="https://github.com/ronikdedhia/news-ai-backend" target="_blank" rel="noopener" class="project-github">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Daily Bytes</h3>
+          <p>AI news aggregator with multi-stage GROQ pipeline — summarization, sentiment, NER, bias detection, Socratic Q&amp;A. Personalized ranked feed, semantic search, TTS briefing via ElevenLabs, and SendGrid keyword alerts.</p>
+          <div class="proj-preview">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">daily-bytes-ten.vercel.app</div>
+            </div>
+            <div class="browser-body">
+              <!-- Drop screenshot at assets/screenshots/dailybytes.jpg then replace the placeholder div below with:
+                   <img src="assets/screenshots/dailybytes.jpg" alt="Daily Bytes" loading="lazy" /> -->
+              <div class="browser-placeholder">
+                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
+                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
+                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span>Next.js 14</span><span>Node.js</span><span>Drizzle ORM</span><span>Groq</span><span>ElevenLabs</span><span>Upstash</span>
+          </div>
+        </div>
+
+        <!-- YogaPedia -->
+        <div class="project-card reveal" data-cat="ai research">
+          <div class="project-header">
+            <div class="proj-monogram">YP</div>
+            <a href="https://github.com/ronikdedhia/YogaPedia" target="_blank" rel="noopener" class="project-github">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3>YogaPedia <span class="project-badge">IEEE Published</span></h3>
+          <p>Real-time yoga pose detection classifying 26 asanas at 90%+ accuracy using BlazePose & Keras. Personalized feedback engine improving posture correction accuracy by 30%.</p>
+          <div class="project-tags">
+            <span>Python</span><span>TensorFlow</span><span>Keras</span><span>MediaPipe</span><span>OpenCV</span><span>Django</span>
+          </div>
+        </div>
+
+        <!-- MessageMate -->
+        <div class="project-card reveal" data-cat="ai research">
+          <div class="project-header">
+            <div class="proj-monogram">MM</div>
+            <a href="https://github.com/ronikdedhia/Sign-Language-Converter" target="_blank" rel="noopener" class="project-github">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3>MessageMate <span class="project-badge">Published</span></h3>
+          <p>Bidirectional ASL recognition & generation — 92% accuracy with ResNet & YOLOv5. NLP-powered text-to-sign conversion (200+ signs) reducing translation time by 25%.</p>
+          <div class="project-tags">
+            <span>YOLOv5</span><span>ResNet-50</span><span>OpenCV</span><span>NLTK</span><span>Django</span><span>React</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-cta reveal">
+        <a href="https://github.com/ronikdedhia" target="_blank" rel="noopener" class="btn btn-ghost">
+          Explore all 53+ projects on GitHub
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TECH MARQUEE (replaces Skills) ═══ -->
+  <div class="marquee-section">
+    <div class="marquee-label">Technologies I work with</div>
+    <div class="marquee-track">
+      <div class="marquee-row">
+        <div class="marquee-inner scroll-left">
+          <span>React.js</span><span>Next.js 14</span><span>Angular 18</span><span>TypeScript</span>
+          <span>Tailwind CSS</span><span>NestJS</span><span>Node.js</span><span>Express.js</span>
+          <span>FastAPI</span><span>GraphQL</span><span>REST APIs</span><span>HTML5</span>
+          <!-- duplicate for seamless loop -->
+          <span>React.js</span><span>Next.js 14</span><span>Angular 18</span><span>TypeScript</span>
+          <span>Tailwind CSS</span><span>NestJS</span><span>Node.js</span><span>Express.js</span>
+          <span>FastAPI</span><span>GraphQL</span><span>REST APIs</span><span>HTML5</span>
+        </div>
+      </div>
+      <div class="marquee-row">
+        <div class="marquee-inner scroll-right">
+          <span>Groq</span><span>LangChain</span><span>RAG</span><span>LLMs</span>
+          <span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>YOLOv5</span>
+          <span>MongoDB</span><span>Redis</span><span>PostgreSQL</span><span>Qdrant</span>
+          <span>AWS</span><span>Docker</span><span>Jenkins</span><span>Datadog</span>
+          <!-- duplicate for seamless loop -->
+          <span>Groq</span><span>LangChain</span><span>RAG</span><span>LLMs</span>
+          <span>TensorFlow</span><span>Keras</span><span>OpenCV</span><span>YOLOv5</span>
+          <span>MongoDB</span><span>Redis</span><span>PostgreSQL</span><span>Qdrant</span>
+          <span>AWS</span><span>Docker</span><span>Jenkins</span><span>Datadog</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ PUBLICATIONS ═══ -->
+  <section id="publications" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Research</span>
+        <h2>Publications</h2>
+      </div>
+      <div class="publications-grid">
+        <div class="pub-card reveal">
+          <div class="pub-badge ieee">IEEE</div>
+          <h3>Individualized Guidance in Yoga Practice</h3>
+          <p>Research on real-time yoga pose estimation using MediaPipe BlazePose with TensorFlow/Keras. Classifies 26 asanas at 90%+ precision with personalized feedback engine improving posture correction accuracy by 30%.</p>
+          <div class="pub-meta">
+            <span>Computer Vision</span>
+            <span>Pose Estimation</span>
+            <span>Deep Learning</span>
+            <span>Healthcare AI</span>
+          </div>
+          <a href="https://ieeexplore.ieee.org/document/10739307" target="_blank" rel="noopener" class="pub-link">
+            View Paper
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="pub-card reveal">
+          <div class="pub-badge ijsr">IJSRCSEIT</div>
+          <h3>American Sign Language Recognition & Generation</h3>
+          <p>End-to-end bidirectional ASL platform using ResNet-50 & YOLOv5 for recognition with NLP-driven text-to-sign generation via Blender animations. Achieves 92% recognition accuracy, reducing translation time by 25%.</p>
+          <div class="pub-meta">
+            <span>Computer Vision</span>
+            <span>NLP</span>
+            <span>Accessibility</span>
+            <span>Deep Learning</span>
+          </div>
+          <a href="https://ijsrcseit.com/CSEIT23902103" target="_blank" rel="noopener" class="pub-link">
+            View Paper
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-wrapper reveal">
+        <span class="section-tag">Contact</span>
+        <h2>Let's Build Something</h2>
+        <p>Open to full-time opportunities, freelance projects, and collaborations in full-stack engineering and AI/ML development. Based in Mumbai — open to remote.</p>
+
+        <div class="contact-links">
+          <a href="mailto:ronikdedhia@gmail.com" class="contact-card">
+            <span class="contact-icon email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </span>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-val">ronikdedhia@gmail.com</span>
+            </div>
+            <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a href="tel:+918104940424" class="contact-card">
+            <span class="contact-icon phone">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+            </span>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-val">+91 81049 40424</span>
+            </div>
+            <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a href="https://github.com/ronikdedhia" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon github">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </span>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">github.com/ronikdedhia</span>
+            </div>
+            <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+
+          <a href="https://linkedin.com/in/ronik-dedhia" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon linkedin">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/ronik-dedhia</span>
+            </div>
+            <svg class="contact-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <!-- Contact form — sign up at formspree.io, get a form ID, replace YOUR_FORM_ID below -->
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="cf-row">
+            <div class="cf-group">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" placeholder="Your name" required autocomplete="name" />
+            </div>
+            <div class="cf-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="cf-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" placeholder="What would you like to build together?" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary cf-submit">
+            <span class="cf-btn-text">Send Message</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+
+        <div class="contact-bottom-cta">
+          <a href="mailto:ronikdedhia@gmail.com" class="btn btn-primary btn-lg">
+            Say Hello
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="Ronik_Dedhia_Resume.pdf" download class="btn btn-secondary btn-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by <strong>Ronik Dedhia</strong> · Mumbai, India</p>
+      <p class="footer-sub">Full-Stack Engineer · AI Developer · Open to Opportunities</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Custom cursor (desktop only) -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
