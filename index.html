@@ -37,7 +37,7 @@
   <!-- ═══ NAVIGATION ═══ -->
   <nav id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">RD</a>
+      <a href="#" class="nav-logo">Ronik Dedhia</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
@@ -61,15 +61,11 @@
     </div>
 
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Available for opportunities
-      </div>
       <h1 class="hero-name">Ronik<br />Dedhia</h1>
       <div class="hero-role">
         <span class="role-prefix">I build </span><span class="typewriter" id="typewriter"></span><span class="cursor">|</span>
       </div>
-      <p class="hero-bio">Full-Stack Software Engineer crafting intelligent web systems at the intersection of modern frontend, scalable backend, and generative AI. Currently driving fintech engineering at <strong>FlexiLoans</strong>, Mumbai.</p>
+      <p class="hero-bio">Full-Stack Software Engineer crafting intelligent web systems at the intersection of modern frontend, scalable backend, and generative AI. Currently driving fintech engineering at FlexiLoans, Mumbai.</p>
 
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -96,27 +92,6 @@
       </div>
     </div>
 
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">₹60Cr+</span>
-        <span class="stat-label">Business Impact</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">53+</span>
-        <span class="stat-label">GitHub Repos</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">2</span>
-        <span class="stat-label">Publications</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num">9.26</span>
-        <span class="stat-label">CGPA</span>
-      </div>
-    </div>
   </section>
 
   <!-- ═══ EXPERTISE STRIP ═══ -->
@@ -130,8 +105,13 @@
               <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
             </svg>
           </div>
+          <span class="expertise-label">Web Engineering</span>
           <h3>Full-Stack Web</h3>
-          <p>End-to-end products — pixel-perfect frontends to distributed, scalable backends with battle-tested integrations.</p>
+          <ul class="expertise-bullets">
+            <li>Pixel-perfect frontends</li>
+            <li>Scalable backend APIs & microservices</li>
+            <li>End-to-end product ownership</li>
+          </ul>
           <div class="expertise-tech">React · Next.js · NestJS · Angular · TypeScript · Node.js</div>
         </div>
 
@@ -142,8 +122,13 @@
               <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/>
             </svg>
           </div>
+          <span class="expertise-label">AI / LLMs</span>
           <h3>Generative AI Systems</h3>
-          <p>Production LLM pipelines — RAG architectures, vector search, multi-stage NLP, and intelligent agent orchestration.</p>
+          <ul class="expertise-bullets">
+            <li>RAG architectures & vector search</li>
+            <li>Multi-stage NLP pipelines</li>
+            <li>LLM agent orchestration</li>
+          </ul>
           <div class="expertise-tech">Groq · LangChain · RAG · Qdrant · NLP · FinBERT · LLMs</div>
         </div>
 
@@ -154,8 +139,13 @@
               <circle cx="12" cy="12" r="3"/>
             </svg>
           </div>
+          <span class="expertise-label">Computer Vision</span>
           <h3>Computer Vision & ML</h3>
-          <p>Real-time inference systems — object detection, pose estimation, and custom model training at production accuracy.</p>
+          <ul class="expertise-bullets">
+            <li>Real-time object detection</li>
+            <li>Pose estimation systems</li>
+            <li>Custom model training & deployment</li>
+          </ul>
           <div class="expertise-tech">TensorFlow · Keras · OpenCV · YOLOv5 · MediaPipe · BlazePose</div>
         </div>
 
@@ -241,8 +231,195 @@
     </div>
   </section>
 
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Projects</span>
+        <h2>What I've Built</h2>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="project-filters reveal">
+        <button class="filter-btn active" data-filter="all">All <span class="filter-count">5</span></button>
+        <button class="filter-btn" data-filter="web">Web <span class="filter-count">3</span></button>
+        <button class="filter-btn" data-filter="ai">AI <span class="filter-count">5</span></button>
+        <button class="filter-btn" data-filter="research">Research <span class="filter-count">2</span></button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- EarningsLens -->
+        <div class="project-card featured reveal" data-cat="ai web">
+          <div class="project-header">
+            <div class="proj-monogram">EL</div>
+            <div class="proj-actions">
+              <a href="https://earnings-lens.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Visit
+              </a>
+              <a href="https://github.com/ronikdedhia/EarningsLens" target="_blank" rel="noopener" class="project-github">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>EarningsLens</h3>
+          <p>AI-powered earnings call analysis platform for Indian NSE/BSE equities. RAG-powered natural language queries with citation tracking, 9-category red flag scanning, management quality scoring, and quarter-over-quarter topic shift analysis.</p>
+          <div class="proj-preview">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">earnings-lens.vercel.app</div>
+            </div>
+            <div class="browser-body">
+              <!-- Drop screenshot at assets/screenshots/earningslens.jpg then replace the placeholder div below with:
+                   <img src="assets/screenshots/earningslens.jpg" alt="EarningsLens" loading="lazy" /> -->
+              <div class="browser-placeholder">
+                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
+                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
+                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-features">
+            <span>RAG + Citations</span>
+            <span>Red Flag Scanner</span>
+            <span>QoQ Comparison</span>
+            <span>Guidance Tracker</span>
+          </div>
+          <div class="project-tags">
+            <span>Next.js 14</span><span>TypeScript</span><span>Qdrant</span><span>FinBERT</span><span>Groq</span><span>Voyage AI</span><span>Turso</span><span>Clerk</span>
+          </div>
+        </div>
+
+        <!-- RestoPulse -->
+        <div class="project-card featured reveal" data-cat="ai web">
+          <div class="project-header">
+            <div class="proj-monogram">RP</div>
+            <div class="proj-actions">
+              <a href="https://resto-pulse-frontend.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Visit
+              </a>
+              <a href="https://github.com/ronikdedhia/RestoPulse" target="_blank" rel="noopener" class="project-github">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>RestoPulse</h3>
+          <p>AI-powered restaurant analytics platform scraping Google Maps & Zomato reviews. Multi-signal GROQ/Llama pipeline with fake review detection, NER, 0–100 health scoring, and real-time Telegram alerts for critical incidents.</p>
+          <div class="proj-preview">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">resto-pulse-frontend.vercel.app</div>
+            </div>
+            <div class="browser-body">
+              <!-- Drop screenshot at assets/screenshots/restopulse.jpg then replace the placeholder div below with:
+                   <img src="assets/screenshots/restopulse.jpg" alt="RestoPulse" loading="lazy" /> -->
+              <div class="browser-placeholder">
+                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
+                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
+                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-features">
+            <span>Fake Review Detection</span>
+            <span>Trend Diffing</span>
+            <span>NER Pipeline</span>
+            <span>Real-time Alerts</span>
+          </div>
+          <div class="project-tags">
+            <span>Next.js 14</span><span>Express</span><span>TypeScript</span><span>Turso</span><span>BullMQ</span><span>Redis</span><span>Groq</span><span>Apify</span>
+          </div>
+        </div>
+
+        <!-- Daily Bytes -->
+        <div class="project-card reveal" data-cat="ai web">
+          <div class="project-header">
+            <div class="proj-monogram">DB</div>
+            <div class="proj-actions">
+              <a href="https://daily-bytes-ten.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                Visit
+              </a>
+              <a href="https://github.com/ronikdedhia/news-ai-backend" target="_blank" rel="noopener" class="project-github">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Daily Bytes</h3>
+          <p>AI news aggregator with multi-stage GROQ pipeline — summarization, sentiment, NER, bias detection, Socratic Q&amp;A. Personalized ranked feed, semantic search, TTS briefing via ElevenLabs, and SendGrid keyword alerts.</p>
+          <div class="proj-preview">
+            <div class="browser-bar">
+              <div class="browser-dots"><span></span><span></span><span></span></div>
+              <div class="browser-url">daily-bytes-ten.vercel.app</div>
+            </div>
+            <div class="browser-body">
+              <!-- Drop screenshot at assets/screenshots/dailybytes.jpg then replace the placeholder div below with:
+                   <img src="assets/screenshots/dailybytes.jpg" alt="Daily Bytes" loading="lazy" /> -->
+              <div class="browser-placeholder">
+                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
+                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
+                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="project-tags">
+            <span>Next.js 14</span><span>Node.js</span><span>Drizzle ORM</span><span>Groq</span><span>ElevenLabs</span><span>Upstash</span>
+          </div>
+        </div>
+
+        <!-- YogaPedia -->
+        <div class="project-card reveal" data-cat="ai research">
+          <div class="project-header">
+            <div class="proj-monogram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="4" r="2"/><path d="M6 20l6-8 6 8"/><path d="M5 13l7-3 7 3"/>
+            </svg>
+          </div>
+            <a href="https://github.com/ronikdedhia/YogaPedia" target="_blank" rel="noopener" class="project-github">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3>YogaPedia <span class="project-badge">IEEE Published</span></h3>
+          <p>Real-time yoga pose detection classifying 26 asanas at 90%+ accuracy using BlazePose & Keras. Personalized feedback engine improving posture correction accuracy by 30%.</p>
+          <div class="project-tags">
+            <span>Python</span><span>TensorFlow</span><span>Keras</span><span>MediaPipe</span><span>OpenCV</span><span>Django</span>
+          </div>
+        </div>
+
+        <!-- MessageMate -->
+        <div class="project-card reveal" data-cat="ai research">
+          <div class="project-header">
+            <div class="proj-monogram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 11V8a2 2 0 0 0-4 0v3M14 10V6a2 2 0 0 0-4 0v4M10 9.5V8a2 2 0 0 0-4 0v6a6 6 0 0 0 12 0v-5a2 2 0 0 0-4 0"/>
+            </svg>
+          </div>
+            <a href="https://github.com/ronikdedhia/Sign-Language-Converter" target="_blank" rel="noopener" class="project-github">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+          <h3>MessageMate <span class="project-badge">Published</span></h3>
+          <p>Bidirectional ASL recognition & generation — 92% accuracy with ResNet & YOLOv5. NLP-powered text-to-sign conversion (200+ signs) reducing translation time by 25%.</p>
+          <div class="project-tags">
+            <span>YOLOv5</span><span>ResNet-50</span><span>OpenCV</span><span>NLTK</span><span>Django</span><span>React</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-cta reveal">
+        <a href="https://github.com/ronikdedhia" target="_blank" rel="noopener" class="btn btn-ghost">
+          Explore all 53+ projects on GitHub
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ EXPERIENCE ═══ -->
-  <section id="experience" class="section section-alt">
+  <section id="experience" class="section">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Experience</span>
@@ -301,7 +478,7 @@
   </section>
 
   <!-- ═══ EDUCATION ═══ -->
-  <section id="education" class="section">
+  <section id="education" class="section section-alt">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag">Education</span>
@@ -367,185 +544,6 @@
           <div class="edu-note">Foundation in systems, networking & software engineering</div>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══ PROJECTS ═══ -->
-  <section id="projects" class="section section-alt">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Projects</span>
-        <h2>What I've Built</h2>
-      </div>
-
-      <!-- Filter tabs -->
-      <div class="project-filters reveal">
-        <button class="filter-btn active" data-filter="all">All <span class="filter-count">5</span></button>
-        <button class="filter-btn" data-filter="web">Web <span class="filter-count">3</span></button>
-        <button class="filter-btn" data-filter="ai">AI <span class="filter-count">5</span></button>
-        <button class="filter-btn" data-filter="research">Research <span class="filter-count">2</span></button>
-      </div>
-
-      <div class="projects-grid" id="projectsGrid">
-
-        <!-- EarningsLens -->
-        <div class="project-card featured reveal" data-cat="ai web">
-          <div class="project-header">
-            <div class="proj-monogram">EL</div>
-            <div class="proj-actions">
-              <a href="https://earnings-lens.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                Live Demo
-              </a>
-              <a href="https://github.com/ronikdedhia/EarningsLens" target="_blank" rel="noopener" class="project-github">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3>EarningsLens</h3>
-          <p>AI-powered earnings call analysis platform for Indian NSE/BSE equities. RAG-powered natural language queries with citation tracking, 9-category red flag scanning, management quality scoring, and quarter-over-quarter topic shift analysis.</p>
-          <div class="proj-preview">
-            <div class="browser-bar">
-              <div class="browser-dots"><span></span><span></span><span></span></div>
-              <div class="browser-url">earnings-lens.vercel.app</div>
-            </div>
-            <div class="browser-body">
-              <!-- Drop screenshot at assets/screenshots/earningslens.jpg then replace the placeholder div below with:
-                   <img src="assets/screenshots/earningslens.jpg" alt="EarningsLens" loading="lazy" /> -->
-              <div class="browser-placeholder">
-                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
-                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
-                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-features">
-            <span>RAG + Citations</span>
-            <span>Red Flag Scanner</span>
-            <span>QoQ Comparison</span>
-            <span>Guidance Tracker</span>
-          </div>
-          <div class="project-tags">
-            <span>Next.js 14</span><span>TypeScript</span><span>Qdrant</span><span>FinBERT</span><span>Groq</span><span>Voyage AI</span><span>Turso</span><span>Clerk</span>
-          </div>
-        </div>
-
-        <!-- RestoPulse -->
-        <div class="project-card featured reveal" data-cat="ai web">
-          <div class="project-header">
-            <div class="proj-monogram">RP</div>
-            <div class="proj-actions">
-              <a href="https://resto-pulse-frontend.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                Live Demo
-              </a>
-              <a href="https://github.com/ronikdedhia/RestoPulse" target="_blank" rel="noopener" class="project-github">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3>RestoPulse</h3>
-          <p>AI-powered restaurant analytics platform scraping Google Maps & Zomato reviews. Multi-signal GROQ/Llama pipeline with fake review detection, NER, 0–100 health scoring, and real-time Telegram alerts for critical incidents.</p>
-          <div class="proj-preview">
-            <div class="browser-bar">
-              <div class="browser-dots"><span></span><span></span><span></span></div>
-              <div class="browser-url">resto-pulse-frontend.vercel.app</div>
-            </div>
-            <div class="browser-body">
-              <!-- Drop screenshot at assets/screenshots/restopulse.jpg then replace the placeholder div below with:
-                   <img src="assets/screenshots/restopulse.jpg" alt="RestoPulse" loading="lazy" /> -->
-              <div class="browser-placeholder">
-                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
-                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
-                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-features">
-            <span>Fake Review Detection</span>
-            <span>Trend Diffing</span>
-            <span>NER Pipeline</span>
-            <span>Real-time Alerts</span>
-          </div>
-          <div class="project-tags">
-            <span>Next.js 14</span><span>Express</span><span>TypeScript</span><span>Turso</span><span>BullMQ</span><span>Redis</span><span>Groq</span><span>Apify</span>
-          </div>
-        </div>
-
-        <!-- Daily Bytes -->
-        <div class="project-card reveal" data-cat="ai web">
-          <div class="project-header">
-            <div class="proj-monogram">DB</div>
-            <div class="proj-actions">
-              <a href="https://daily-bytes-ten.vercel.app/" target="_blank" rel="noopener" class="proj-demo">
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                Live Demo
-              </a>
-              <a href="https://github.com/ronikdedhia/news-ai-backend" target="_blank" rel="noopener" class="project-github">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3>Daily Bytes</h3>
-          <p>AI news aggregator with multi-stage GROQ pipeline — summarization, sentiment, NER, bias detection, Socratic Q&amp;A. Personalized ranked feed, semantic search, TTS briefing via ElevenLabs, and SendGrid keyword alerts.</p>
-          <div class="proj-preview">
-            <div class="browser-bar">
-              <div class="browser-dots"><span></span><span></span><span></span></div>
-              <div class="browser-url">daily-bytes-ten.vercel.app</div>
-            </div>
-            <div class="browser-body">
-              <!-- Drop screenshot at assets/screenshots/dailybytes.jpg then replace the placeholder div below with:
-                   <img src="assets/screenshots/dailybytes.jpg" alt="Daily Bytes" loading="lazy" /> -->
-              <div class="browser-placeholder">
-                <div class="bp-topbar"><div class="bp-pill"></div><div class="bp-pill short"></div></div>
-                <div class="bp-cards"><div class="bp-card"></div><div class="bp-card"></div><div class="bp-card"></div></div>
-                <div class="bp-lines"><div class="bp-line"></div><div class="bp-line short"></div><div class="bp-line"></div></div>
-              </div>
-            </div>
-          </div>
-          <div class="project-tags">
-            <span>Next.js 14</span><span>Node.js</span><span>Drizzle ORM</span><span>Groq</span><span>ElevenLabs</span><span>Upstash</span>
-          </div>
-        </div>
-
-        <!-- YogaPedia -->
-        <div class="project-card reveal" data-cat="ai research">
-          <div class="project-header">
-            <div class="proj-monogram">YP</div>
-            <a href="https://github.com/ronikdedhia/YogaPedia" target="_blank" rel="noopener" class="project-github">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-          <h3>YogaPedia <span class="project-badge">IEEE Published</span></h3>
-          <p>Real-time yoga pose detection classifying 26 asanas at 90%+ accuracy using BlazePose & Keras. Personalized feedback engine improving posture correction accuracy by 30%.</p>
-          <div class="project-tags">
-            <span>Python</span><span>TensorFlow</span><span>Keras</span><span>MediaPipe</span><span>OpenCV</span><span>Django</span>
-          </div>
-        </div>
-
-        <!-- MessageMate -->
-        <div class="project-card reveal" data-cat="ai research">
-          <div class="project-header">
-            <div class="proj-monogram">MM</div>
-            <a href="https://github.com/ronikdedhia/Sign-Language-Converter" target="_blank" rel="noopener" class="project-github">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-          <h3>MessageMate <span class="project-badge">Published</span></h3>
-          <p>Bidirectional ASL recognition & generation — 92% accuracy with ResNet & YOLOv5. NLP-powered text-to-sign conversion (200+ signs) reducing translation time by 25%.</p>
-          <div class="project-tags">
-            <span>YOLOv5</span><span>ResNet-50</span><span>OpenCV</span><span>NLTK</span><span>Django</span><span>React</span>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="projects-cta reveal">
-        <a href="https://github.com/ronikdedhia" target="_blank" rel="noopener" class="btn btn-ghost">
-          Explore all 53+ projects on GitHub
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
       </div>
     </div>
   </section>
