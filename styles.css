@@ -7,7 +7,7 @@
 
 :root {
   --bg:          #07070f;
-  --bg-alt:      #0c0c1c;
+  --bg-alt:      #090912;
   --card:        rgba(255,255,255,0.03);
   --card-border: rgba(255,255,255,0.07);
   --card-hover:  rgba(255,255,255,0.055);
@@ -258,26 +258,6 @@ a { text-decoration: none; }
 }
 .social-link:hover { color: var(--primary); transform: translateY(-1px); }
 
-/* Stats bar */
-.hero-stats {
-  position: relative; z-index: 1;
-  display: flex; align-items: center;
-  max-width: 1200px; margin: 64px auto 0;
-  background: rgba(255,255,255,.025);
-  border: 1px solid var(--card-border);
-  border-radius: var(--r); backdrop-filter: blur(12px); overflow: hidden;
-}
-
-.stat { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 26px 16px; gap: 4px; transition: background var(--t) var(--ease); }
-.stat:hover { background: rgba(255,255,255,.02); }
-
-.stat-num {
-  font-size: 1.9rem; font-weight: 800; letter-spacing: -.04em;
-  background: var(--grad-text); -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; background-clip: text;
-}
-.stat-label { font-size: .72rem; color: var(--text-subtle); font-weight: 500; text-align: center; }
-.stat-divider { width: 1px; height: 40px; background: var(--card-border); flex-shrink: 0; }
 
 /* ═══ EXPERTISE STRIP ═══ */
 .expertise-strip {
@@ -300,14 +280,14 @@ a { text-decoration: none; }
 
 .expertise-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-  background: var(--grad); transform: scaleX(0); transform-origin: left;
-  transition: transform .5s var(--ease);
+  background: var(--grad); opacity: .28;
+  transition: opacity .4s var(--ease);
 }
-.expertise-card:hover::before { transform: scaleX(1); }
+.expertise-card:hover::before { opacity: 1; }
 
 .expertise-card:hover {
   border-color: rgba(129,140,248,.2); transform: translateY(-4px);
-  background: var(--card-hover);
+  background: var(--card-hover); box-shadow: var(--glow);
 }
 
 .expertise-icon {
@@ -338,6 +318,14 @@ a { text-decoration: none; }
   font-size: .72rem; color: var(--text-subtle);
   font-family: 'JetBrains Mono',monospace; line-height: 1.6;
 }
+
+/* ── Section ambient glows — pulls hero atmosphere through the page ── */
+#about      { background-image: radial-gradient(ellipse 55% 55% at 92% 8%,  rgba(129,140,248,.055) 0%, transparent 100%); }
+#projects   { background: radial-gradient(ellipse 50% 60% at 8%  90%, rgba(34,211,238,.04)   0%, transparent 100%) var(--bg-alt); }
+#experience { background-image: radial-gradient(ellipse 55% 55% at 88% 55%, rgba(167,139,250,.045) 0%, transparent 100%); }
+#education  { background: radial-gradient(ellipse 50% 50% at 10% 15%, rgba(129,140,248,.045) 0%, transparent 100%) var(--bg-alt); }
+#publications { background: radial-gradient(ellipse 55% 55% at 85% 25%, rgba(34,211,238,.035) 0%, transparent 100%) var(--bg-alt); }
+#contact    { background-image: radial-gradient(ellipse 60% 60% at 50% 80%, rgba(129,140,248,.05)  0%, transparent 100%); }
 
 /* ═══ ABOUT ═══ */
 .about-grid {
@@ -397,7 +385,7 @@ a { text-decoration: none; }
   transition: border-color var(--t) var(--ease), transform var(--t) var(--ease), background var(--t) var(--ease);
 }
 .highlight-card:hover {
-  border-color: rgba(129,140,248,.2); background: var(--card-hover); transform: translateX(5px);
+  border-color: rgba(129,140,248,.2); background: var(--card-hover); transform: translateY(-3px); box-shadow: var(--glow);
 }
 .highlight-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; }
 .highlight-card strong { display: block; font-size: .88rem; font-weight: 600; color: var(--text); margin-bottom: 3px; }
@@ -475,10 +463,10 @@ a { text-decoration: none; }
 }
 .edu-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--grad); transform: scaleX(0); transform-origin: left;
-  transition: transform .4s var(--ease);
+  background: var(--grad); opacity: .3;
+  transition: opacity .4s var(--ease);
 }
-.edu-card:hover::before { transform: scaleX(1); }
+.edu-card:hover::before { opacity: 1; }
 .edu-card:hover { border-color: rgba(129,140,248,.22); transform: translateY(-4px); box-shadow: var(--glow); }
 
 .edu-top { display: flex; align-items: flex-start; gap: 16px; }
@@ -602,8 +590,8 @@ a { text-decoration: none; }
 
 .project-features { display: flex; flex-wrap: wrap; gap: 6px; }
 .project-features span {
-  font-size: .68rem; font-weight: 600; color: var(--cyan);
-  background: rgba(34,211,238,.06); border: 1px solid rgba(34,211,238,.14);
+  font-size: .68rem; font-weight: 600; color: var(--primary);
+  background: rgba(129,140,248,.07); border: 1px solid rgba(129,140,248,.18);
   padding: 3px 10px; border-radius: 100px;
 }
 
@@ -671,10 +659,10 @@ a { text-decoration: none; }
 }
 .pub-card::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--grad); transform: scaleX(0); transform-origin: left;
-  transition: transform .4s var(--ease);
+  background: var(--grad); opacity: .3;
+  transition: opacity .4s var(--ease);
 }
-.pub-card:hover::before { transform: scaleX(1); }
+.pub-card:hover::before { opacity: 1; }
 .pub-card:hover { border-color: rgba(129,140,248,.22); transform: translateY(-5px); box-shadow: var(--glow); }
 
 .pub-badge {

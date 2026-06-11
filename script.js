@@ -23,7 +23,7 @@ const roles = [
   'full-stack products',
   'LLM pipelines',
   'production-ready APIs',
-  'GenAI experiences',
+  'LLM-powered products',
 ];
 let roleIdx = 0, charIdx = 0, deleting = false, paused = false;
 const typeEl = document.getElementById('typewriter');
@@ -106,49 +106,6 @@ const navObserver = new IntersectionObserver(
   { rootMargin: '-40% 0px -55% 0px' }
 );
 sections.forEach((s) => navObserver.observe(s));
-
-// ── Animated number counters ──
-const STAT_CONFIGS = [
-  { prefix: '₹', value: 60,   suffix: 'Cr+', decimals: 0 },
-  { prefix: '',  value: 53,   suffix: '+',   decimals: 0 },
-  { prefix: '',  value: 2,    suffix: '',    decimals: 0 },
-  { prefix: '',  value: 9.26, suffix: '',    decimals: 2 },
-];
-
-function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-function countUp(el, cfg, duration = 1600) {
-  const start = performance.now();
-  function tick(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased    = easeOutCubic(progress);
-    const current  = cfg.value * eased;
-    el.textContent = cfg.prefix + current.toFixed(cfg.decimals) + cfg.suffix;
-    if (progress < 1) requestAnimationFrame(tick);
-    else el.textContent = cfg.prefix + cfg.value.toFixed(cfg.decimals) + cfg.suffix;
-  }
-  requestAnimationFrame(tick);
-}
-
-const heroStats = document.querySelector('.hero-stats');
-if (heroStats) {
-  let fired = false;
-  const statsObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !fired) {
-          fired = true;
-          document.querySelectorAll('.stat-num').forEach((el, i) => {
-            if (STAT_CONFIGS[i]) countUp(el, STAT_CONFIGS[i]);
-          });
-          statsObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.6 }
-  );
-  statsObserver.observe(heroStats);
-}
 
 // ── Project filter tabs ──
 const filterBtns   = document.querySelectorAll('.filter-btn');
