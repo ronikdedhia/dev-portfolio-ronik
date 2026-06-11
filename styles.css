@@ -15,7 +15,7 @@
   --cyan:        #22d3ee;
   --accent:      #a78bfa;
   --text:        #f1f5f9;
-  --text-muted:  #94a3b8;
+  --text-muted:  #c4d1e1;
   --text-subtle: #475569;
   --grad:        linear-gradient(135deg,#818cf8 0%,#22d3ee 100%);
   --grad-text:   linear-gradient(135deg,#a5b4fc 0%,#67e8f9 100%);
@@ -93,7 +93,7 @@ a { text-decoration: none; }
 }
 
 .nav-logo {
-  font-size: .9rem; font-weight: 700; letter-spacing: -.02em;
+  font-size: .9rem; font-weight: 700; letter-spacing: -.02em; white-space: nowrap;
   background: var(--grad); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; background-clip: text;
 }
@@ -288,7 +288,7 @@ a { text-decoration: none; }
 }
 
 .expertise-grid {
-  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; align-items: stretch;
 }
 
 .expertise-card {
@@ -732,8 +732,11 @@ a { text-decoration: none; }
 
 /* ═══ FOOTER ═══ */
 footer { padding: 40px 0; border-top: 1px solid var(--card-border); text-align: center; }
-footer p { color: var(--text-subtle); font-size: .82rem; }
+footer p { color: var(--text-subtle); font-size: .82rem; margin-top: 12px; }
 footer strong { color: var(--text-muted); font-weight: 600; }
+.footer-social { display: flex; justify-content: center; gap: 20px; margin-bottom: 4px; }
+.footer-social a { color: var(--text-subtle); transition: color var(--t) var(--ease); }
+.footer-social a:hover { color: var(--primary); }
 .footer-sub { margin-top: 6px; font-size: .75rem; }
 
 /* ═══ BACK TO TOP ═══ */

@@ -188,20 +188,6 @@ if (contactForm) {
     const parentBtn  = contactForm.querySelector('.cf-submit');
     const original   = submitBtn.textContent;
 
-    // Mailto fallback while Formspree isn't configured
-    if (contactForm.action.includes('YOUR_FORM_ID')) {
-      const name    = contactForm.querySelector('[name="name"]').value;
-      const email   = contactForm.querySelector('[name="email"]').value;
-      const message = contactForm.querySelector('[name="message"]').value;
-      const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-      const body    = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
-      window.open(`mailto:ronikdedhia@gmail.com?subject=${subject}&body=${body}`);
-      submitBtn.textContent = '✓ Opening mail client…';
-      contactForm.reset();
-      setTimeout(() => { submitBtn.textContent = original; }, 3500);
-      return;
-    }
-
     submitBtn.textContent = 'Sending…';
     parentBtn.disabled    = true;
 
