@@ -240,10 +240,10 @@ a { text-decoration: none; }
 }
 
 .btn-ghost {
-  background: var(--card); color: var(--text); border: 1px solid var(--card-border);
+  background: var(--card); color: var(--primary); border: 1px solid rgba(129,140,248,.3);
 }
 .btn-ghost:hover {
-  background: var(--card-hover); border-color: rgba(255,255,255,.14);
+  background: rgba(129,140,248,.07); border-color: rgba(129,140,248,.55);
   transform: translateY(-2px);
 }
 
@@ -706,7 +706,7 @@ a { text-decoration: none; }
 }
 .contact-icon.email   { background: linear-gradient(135deg,#818cf8,#a78bfa); }
 .contact-icon.phone   { background: linear-gradient(135deg,#22d3ee,#06b6d4); }
-.contact-icon.github  { background: linear-gradient(135deg,#374151,#1f2937); border: 1px solid rgba(255,255,255,.1); }
+.contact-icon.github  { background: linear-gradient(135deg,#818cf8,#a78bfa); }
 .contact-icon.linkedin{ background: linear-gradient(135deg,#0ea5e9,#0284c7); }
 
 .contact-label { display: block; font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--text-subtle); margin-bottom: 2px; }
